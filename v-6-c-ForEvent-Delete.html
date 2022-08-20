@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document for event to test event </title>
+    <style>
+        p{
+          color: fuchsia;   font-size: 2em;font-weight: 300;
+        }
+        #fifa-22{
+            color:royalblue
+        }
+        input{
+            font-size: large;font-weight: 500;border: 2px solid ;
+            padding: 7px;
+        }
+        button{
+            padding: 13px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- example :: 1  -->
+  <h1 style="text-align: center;font-size: 3em;color: coral;font-weight:900">Circle Football 0001 FIFA 2022</h1>
+
+  <p id="covid-19">don't wait in this point otherwise will be affected <span style="color:red ;">covid-19</span></p>
+
+  <input id="input-area" type="text"style="padding-x:30px;padding-y:20px;border-color:salmon"placeHolder="type here 'delete'">
+
+  <button id="confirm-delete" disabled style="border:none;border-radius:5px;cursor: pointer;font-size:16px">delete</button>
+
+
+
+  
+
+
+  <!-- example :: 2  -->
+
+  <h2 style="text-align: center;font-size: 3em;color: rgb(54, 17, 31);font-weight:900">Football FIFA 2022</h1>
+
+  <p id="fifa-22">don't wait in this point otherwise will be affected <span style="color:red ;">covid-19</span></p>
+
+  <input id="fifa-input" type="text"style="padding-x:30px;padding-y:20px;border-color:salmon"placeHolder="type here 'delete'">
+
+  <button id="fifa-delete"disabled style="border:none;border-radius:5px;cursor: pointer;font-size:16px">delete</button>
+</header>
+<script>
+    // for example :: 2 
+
+    // 1..using "click" for display / 
+    document.getElementById("fifa-delete").addEventListener("click",function(){
+        document.getElementById('fifa-22').style.display = "none";
+    })
+    // 2..using "focus" for bg highLight 
+    document.getElementById("fifa-input").addEventListener("focus",function(){
+        document.body.style.backgroundColor = " yellow"
+    })
+    // 3..using "keyup" for real tasks what i want to exact
+    document.getElementById("fifa-input").addEventListener("keyup",function(event){
+        if(event.target.value == "delete"){
+            document.getElementById("fifa-delete").removeAttribute("disabled");
+        }
+        else{
+            document.getElementById("fifa-delete").setAttribute("disabled",true);
+        }
+    }) 
+
+
+    // for example :: 1 
+    // 1...."click" for button 
+    document.getElementById("confirm-delete").addEventListener('click',function(){
+        document.getElementById('covid-19').style.display = "none";
+    })
+    // 2..."focus" in input area for modify backgroudnColor 
+    document.getElementById('input-area').addEventListener('focus',function(){
+        document.body.style.backgroundColor = "green";
+    }) 
+    // 3......"keyup" for real condition and all
+    document.getElementById("input-area").addEventListener("keyup",function(event){
+        if(event.target.value == "delete"){
+            document.getElementById("confirm-delete").removeAttribute("disabled");
+        }
+        else{
+            document.getElementById("confirm-delete").setAttribute("disabled",true);
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box and display what developer wants</title>
+</head>
+<body>
+    <h1 style="color:green;text-align:center">Malda Town Center  2022</h1>
+    <div id="mainLeader">
+        <p>this is unique rabul this is unique rabulthis is unique rabulthis is unique rabul
+            this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul
+            this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul
+        </p>
+        <p>this is unique rabul       this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul
+            this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul</p>
+        <p>this is unique rabul       this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul
+            this is unique rabulthis is unique rabulthis is unique rabulthis is unique rabulthis is unique rabul</p>
+    </div>
+     <textarea name="" id="comentAreaUser" cols="50" rows="6"></textarea> <br>
+    <button id="submitButton">post</button>
+    <script>
+        // 1. add event  listener button 
+        const myPostButton = document.getElementById('submitButton').addEventListener('click',function(){
+            //  console.log('hello worl how are you')
+            // 2. text area "user comment"
+            const commentBox = document.getElementById('comentAreaUser');
+            const userComment = commentBox.value;
+
+            // // 3. create a paragraph for new"comment"
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+             
+            // // 4. appendchild in main wholeRoom
+            const commentContainer = document.getElementById('mainLeader');
+            commentContainer.appendChild(newComment);
+
+
+            // 5. clean comment Box
+             commentBox.value = '';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commnet box and display</title>
+</head>
+<body>
+    <div>
+        <h1 style="color:green;text-align:center">Elendary High School (H.S)</h1>
+
+
+        <!-- main playGround -->
+        <div id="mainFloor">
+            <p>                this is optimistic rabiul just growing on upon my cruel targets for 
+                this is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets for
+            </p>
+            <p>this is optimistic rabiul just growing on upon my cruel targets for       this is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets for</p>
+            <p>this is optimistic rabiul just growing on upon my cruel targets for 
+                this is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets forthis is optimistic rabiul just growing on upon my cruel targets for
+            </p>
+        </div>
+    </div>
+    <textarea name="" id="commentBox" cols="50" rows="6"></textarea> <br>
+    <button id="pressMe">post</button>
+<script>
+
+    // 1. add event button handler 
+    document.getElementById('pressMe').addEventListener('click',function(){
+        // 2. user commet box 
+     const myCommentBox = document.getElementById('commentBox')
+     const userComment = myCommentBox.value;
+    //  console.log(userComment);
+
+    // 3. new comment add paragraph
+    const newCommnent = document.createElement('p');
+    newCommnent.innerText = myCommentBox.value;
+
+    // 4. append the comment 
+    const addCommentGround = document.getElementById('mainFloor');
+    addCommentGround.appendChild(newCommnent);
+    // 5. clean comment box
+    myCommentBox.value = ''; 
+
+    //    console.log(newCommnent.value);
+ 
+    
+    })
+    
+</script>
+
+
+    
+</body>
+</html>

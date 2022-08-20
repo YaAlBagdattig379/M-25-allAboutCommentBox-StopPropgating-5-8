@@ -1,0 +1,66 @@
+<!-- how to stop propagating in "Event bubble " -->
+<!-- how to stop propagating in "Event bubble " -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> stop propagating</title>
+</head>
+<body>
+
+    <!-- example : 1 -->
+    <section id="sec-container">
+        <h1>this is a test for stop propagating</h1>
+        <ul id="list-container">
+            <li class="list-item">this is noram test of stop propagating on event bubble 1</li>
+            <li id="excep-item" class="list-item"style="color:green">this is noram test of stop propagating on event bubble 2</li>
+            <li class="list-item">this is noram test of stop propagating on event bubble 3</li>
+            <li class="list-item">this is noram test of stop propagating on event bubble 4</li>
+        </ul>
+    </section>
+    <!-- example : 1 -->
+    <section id="sect-container">
+        <h1>this is a test for stop propagating</h1>
+        <ul id="lis-container">
+            <li class="list-item">this is noram test of stop propagating on event bubble 1</li>
+            <li class="list-item">this is noram test of stop propagating on event bubble 1</li>
+            <li id="exception-item" class="list-item"style="color:green">this is noram test of stop propagating on event bubble 2</li>
+            <li class="list-item">this is noram test of stop propagating on event bubble 3</li>
+            <li class="list-item">this is noram test of stop propagating on event bubble 4</li>
+        </ul>
+    </section>
+    <script>
+        // example : 2
+        // 1.....
+        document.getElementById('exception-item').addEventListener("click",function(event){
+            console.log("this is third item")
+            event.stopPropagation()
+        })
+        // 2.....
+        document.getElementById('lis-container').addEventListener("click",function(){
+            console.log("this is list container")
+        })
+        // 3.....
+        document.getElementById('sect-container').addEventListener("click",function(){
+            console.log("this is section container")
+        })
+        // example : 1 
+        // specific item :: 1 also "stop propagating"
+        // specific item :: 1 also "stop propagating"
+        document.getElementById("excep-item").addEventListener('click',function(element){
+            console.log('this is excep-item in this code for only stop propagation.')
+            event.stopPropagation();
+        })
+        // li-container :: 2
+        document.getElementById("list-container").addEventListener('click',function(){
+            console.log('this is controller of all li.')
+        })
+        // section-container :: 3
+        document.getElementById("sec-container").addEventListener('click',function(){
+            console.log('this is section  , container all of childs.')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of comment</title>
+</head>
+<body>
+    <h1 style="color: rgb(253, 8, 0);text-align: center;">Without sleep and without love are not same in life</h1>  
+    <div id="commentContainer">
+        <p>         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio est quibusdam qui perferendis facilis neque, pariatur eaque ipsum enim necessitatibus sunt eum, tempora, accusamus ipsam numquam beatae rem placeat.
+        assumenda eum, fugit tempora omnis dignissimos dolorem ipsa rem?</p>
+        <p>            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio est quibusdam qui perferendis facilis neque, pariatur eaque ipsum enim necessitatibus sunt eum, tempora, accusamus ipsam numquam beatae rem placeat.
+        </p>
+        <p>            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio est quibusdam qui perferendis facilis neque, pariatur eaque ipsum enim necessitatibus sunt eum, tempora, accusamus ipsam numquam beatae rem placeat.
+        dignissimos dolorem ipsa rem?</p>
+        <!-- <p id="newCommentPrgpAdd"></p> -->
+    </div>
+    <textarea name=" typehere" id="commentBox" cols="70" rows="8"></textarea><br>
+    <button id="submitClick">post</button>
+    
+    <script>
+              // 1. add button event handler
+        document.getElementById('submitClick').addEventListener('click',function(){
+
+              // 2.  get user comment
+            const myCommentBox = document.getElementById('commentBox');
+            const userCommnent = myCommentBox.value;
+            // console.log(userCommnent);
+            
+            //   // 3.  create comment paragraph
+
+            const newComment = document.createElement('p');
+            newComment.innerText = myCommentBox.value;
+            // //   // 4.  append the comment 
+              
+            const commnetContainer = document.getElementById('commentContainer');
+            commnetContainer.append(newComment);
+            // // // console.log(commnetContainer);
+            // // // //clean the comment box 
+            myCommentBox.value = '';
+             
+        })
+    </script>
+    <!-- <script src="jsFolders/js.js"></script> -->
+</body>
+</html>

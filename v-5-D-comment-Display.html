@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box and display</title>
+</head>
+<body>
+    <h1 style="color: green;text-align:center"> Amr sonar bangla </h1>
+    <div id="mainCommentBox">
+        <p>this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys</p>
+        <p>this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys</p>
+        <p>this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys</p>
+        <p>this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guysthis is west where all of culprit britsh was to stay for 200 years by c</p>
+        <p>this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys this is west where all of culprit britsh was to stay for 200 years by cruelting on innocent the citizens of west bengal guys</p>
+     
+    </div>
+    <textarea name="" id="commentArea" cols="35" rows="4"></textarea> <br>
+     <button id="postButton">post</button>
+    <script>
+        // 1.  add event button handler 
+        document.getElementById('postButton').addEventListener('click',function(){
+          // 2. user comment area
+          const commnentBoxArea = document.getElementById('commentArea');
+          const userComment = commnentBoxArea.value;
+        // 3. creat new paragraph
+        const newCommentOne = document.createElement('p');
+
+        newCommentOne.innerText = commnentBoxArea.value;
+        
+        // // 4. appendChil new as a newComment
+
+        const commnentLeader = document.getElementById('mainCommentBox');
+        commnentLeader.appendChild(newCommentOne);
+        // // 5. clean commentBox
+         commnentBoxArea.value = '';
+
+
+        })
+</script>
+</body>
+</html>

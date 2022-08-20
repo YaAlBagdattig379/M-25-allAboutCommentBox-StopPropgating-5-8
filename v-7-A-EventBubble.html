@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+
+<body>
+    <h1 style="color: green ;text-align:center">Event Bubble !</h1>
+    <div></div>
+    <h2>Event Bubble !</h2>
+    <!-- example :: 1 -->
+    <section id="section-container">
+        <h3>hello pagol world</h3>
+        <ul id="list-container">
+            <li class="item">lorem, this is domutha FaridPur</li>
+            <li id="second-listItem"class="item"style="color:red;">lorem, this  is narail buth. </li>
+            <li class="item">lorem, this is anchlahar buth</li>
+            <li class="item">lorem, this is beheda pukur buth</li>
+            <li class="item">lorem, this is Elendari buth </li>
+        </ul>
+    </section>
+    <section id="sec-container">
+    <!-- example :: 2 -->
+      <h3>Hello Crazy World</h3>
+        <ul id="ul-container">
+            <li class="item">lorem, this is domutha FaridPur</li>
+            <li id="second-Item"class="item"style="color:red;">lorem, this  is narail buth. </li>
+            <li class="item">lorem, this is anchlahar buth</li>
+            <li class="item">lorem, this is beheda pukur buth</li>
+            <li class="item">lorem, this is Elendari buth </li>
+        </ul>
+
+    </section>
+    <script>
+    // example :: 2
+     
+    // 1..
+    document.getElementById("second-Item").addEventListener("click",function(){
+        console.log('this is second item of li')
+    })
+    // 2.. 
+    document.getElementById("ul-container").addEventListener("click",function(){
+        console.log('this is ul container ')
+    })
+    // 3.. 
+    document.getElementById("sec-container").addEventListener("click",function(){
+        console.log('this is section container all of there ')
+    })
+
+    
+    // example :: 1
+
+        // normal test :: 1
+        document.getElementById('second-listItem').addEventListener('click',function(){
+            console.log('second item clicked')
+        })
+
+        // li container "ul" test :: 2
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log('list container clicked by me!')
+        })
+        // // 'parent' of 'ul' "section-container" test :: 3
+        // document.getElementById('section-container').addEventListener('click',function(){
+        //     console.log('section container clicked by myself !')
+        // })
+</script>
+</body>                                                                                          
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>normally creat a "delete"button</title>
+</head>
+<body>
+    <!-- example :: 1 -->
+    <!-- <h1 style="color: green ;text-align:center">Hello Dosto ! </h1>
+
+    <p>Example :: <span style="color: yellow;">One</span></p>
+    <h3 id="myNewSentence">Hey ! don't touch me bro.</h3>
+    <input id="final-input" type="text"placeHolder="type here delete">
+    <button id="deleteButon"disabled>delete</button> -->
+
+    <!-- example :: 2  --> 
+        <p>Example ::<span style="color: red;">Two</span> </p>
+    <h3 id="2ndSentence">Hey ! Kolkata.</h3>
+    <input id="input3" type="text"placeHolder="type here delete3">
+    <button id="deleteBtn"disabled>delete3</button> 
+
+    <script>
+                // <!-- example :: 1 -->
+
+        //   document.getElementById('deleteButon').addEventListener('click',function(){
+        //        document.getElementById('myNewSentence').style.display = 'none'
+        //    })
+        //    // 1 .focus
+        //   document.getElementById('final-input').addEventListener('focus',function(){
+        //        document.body.style.backgroundColor = 'green'
+        //    })
+        //    // 2 .keyup
+        //   document.getElementById('final-input').addEventListener('keyup',function(event){
+        //        if(event.target.value == 'delete'){
+        //          document.getElementById('deleteButon').removeAttribute('disabled')
+        //        }
+        //        else{
+        //         deleteButon.setAttribute('disabled',true);
+        //        }
+        //    })
+
+
+
+           // <!-- example :: 2 -->
+            document.getElementById('deleteBtn').addEventListener('click',function(){
+                    document.getElementById('2ndSentence').style.display = 'none';
+            });
+            // 1. focus 
+            document.getElementById('input3').addEventListener('focus',function(){
+                    document.body.style.backgroundColor= 'pink';
+            });
+            // 2. keyup
+            document.getElementById('input3').addEventListener('keyup',function(event){
+                   if(event.target.value=='delete3'){
+                        document.getElementById('deleteBtn').removeAttribute('disabled');
+                    }
+
+                    else{
+                        deleteBtn.setAttribute('disabled',true);
+                    }
+            });
+
+    </script>
+</body>
+</html>

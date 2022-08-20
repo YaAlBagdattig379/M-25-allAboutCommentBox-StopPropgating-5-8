@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make githun delete confirmation button </title>
+</head>
+<body>
+  <h1 style="color:yellow;text-align:center">Hello Fulbari ! </h1>
+
+
+  <h3 id="secret-info">Write down '<span style="color: red;">delete</span>' to delete.</h3>
+  <input type="text"id="delete-confirm"placeHolder="type here delete">
+  <button id="deleteButton"disabled>delete</button>
+    <script>
+        document.getElementById('deleteButton').addEventListener('click',function(){
+            document.getElementById('secret-info').style.display = 'none';
+        })
+        // 1. focus
+        document.getElementById('delete-confirm').addEventListener('focus',function(){
+            document.body.style.backgroundColor= 'green';
+        })
+        // 2. blur
+        // document.getElementById('delete-confirm').addEventListener('blur',function(){
+        //     document.body.style.backgroundColor= 'white';
+        // })
+        // 3. keyUp
+        // document.getElementById('delete-confirm').addEventListener('keyup',function(){
+        //     const deleteField = document.getElementById('delete-confirm');
+        //     console.log(deleteField.value);
+        // })
+        // 4. change
+        // document.getElementById('delete-confirm').addEventListener('change',function(event){
+        //     const deleteField = document.getElementById('delete-confirm');
+        //     console.log(deleteField.value);
+        // })
+
+        // how to set delete button in input  through 'keyUp'
+
+         // 5. keyUp
+         document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            // if(event.target.value=='delete');
+            if (event.target.value == 'delete'){
+                
+            // document.getElementById('deleteButton').removeAttribute('disabled');
+             document.getElementById('deleteButton').removeAttribute('disabled');
+
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }
+        });
+        
+    </script>
+</body>
+</html>
